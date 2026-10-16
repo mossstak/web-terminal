@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Web Terminal</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="terminal-window">
+      <div id="terminal-header">
+        <div class="window-controls">
+          <span class="dot close"></span>
+          <span class="dot minimize"></span>
+          <span class="dot maximize"></span>
+        </div>
+        <span class="window-title">Web Terminal</span>
+      </div>
+
+      <div id="terminal-body">
+        <pre class="ascii-art">
+██╗      ███╗   ███╗ ██████╗ ███████╗████████╗ █████╗ ██╗  ██╗    ██╗  ██╗██╗  ██╗ █████╗ ███╗   ██╗
+╚██╗     ████╗ ████║██╔═══██╗██╔════╝╚══██╔══╝██╔══██╗██║ ██╔╝    ██║ ██╔╝██║  ██║██╔══██╗████╗  ██║
+ ╚██╗    ██╔████╔██║██║   ██║███████╗   ██║   ███████║█████╔╝     █████╔╝ ███████║███████║██╔██╗ ██║
+ ██╔╝    ██║╚██╔╝██║██║   ██║╚════██║   ██║   ██╔══██║██╔═██╗     ██╔═██╗ ██╔══██║██╔══██║██║╚██╗██║
+██╔╝     ██║ ╚═╝ ██║╚██████╔╝███████║   ██║   ██║  ██║██║  ██╗    ██║  ██╗██║  ██║██║  ██║██║ ╚████║    ███████╗
+╚═╝      ╚═╝     ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝    ╚══════╝
+        </pre>
+        <!-- Output from previous commands renders here -->
+        <div id="output"></div>
+
+        <!-- Active input prompt line -->
+        <div class="input-line">
+          <div class="prompt">guest@terminal:~$</div>
+          <div class="input-wrapper">
+            <span id="input-mirror"></span>
+            <span class="custom-cursor">_</span>
+            <input
+              type="text"
+              id="cli-input"
+              autofocus
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
