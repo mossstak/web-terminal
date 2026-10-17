@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #terminal-window {
@@ -228,10 +228,19 @@ body {
 
   /* Scale or hide ASCII art on narrow displays */
   .ascii-art {
-    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
-    font-size: 0.25rem; /* Scales characters down to fit narrow viewports */
-    line-height: 1;
+    /* Use fonts designed for terminal block glyphs */
+    font-family:
+      ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+      monospace;
+    font-size: clamp(0.5rem, 1.1vw, 0.75rem); /* Responsive scaling */
+    line-height: 1; /* Eliminates vertical overlap */
+    letter-spacing: 0;
+    white-space: pre;
     overflow-x: auto;
+    user-select: none;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    color: #5af78e;
   }
 
   .input-line {
