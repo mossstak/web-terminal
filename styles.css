@@ -228,19 +228,24 @@ body {
 
   /* Scale or hide ASCII art on narrow displays */
   .ascii-art {
-    /* Use fonts designed for terminal block glyphs */
-    font-family:
-      ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
-      monospace;
-    font-size: clamp(0.5rem, 1.1vw, 0.75rem); /* Responsive scaling */
-    line-height: 1; /* Eliminates vertical overlap */
+    font-family: 'VT323', 'Fira Code', monospace;
+    color: #5af78e;
+    font-size: clamp(
+      0.45rem,
+      1.8vw,
+      0.75rem
+    ); /* Dynamically shrinks to fit the mobile screen width */
+    line-height: 1;
     letter-spacing: 0;
     white-space: pre;
-    overflow-x: auto;
+    overflow-x: hidden;
     user-select: none;
     margin-top: 10px;
     margin-bottom: 12px;
-    color: #5af78e;
+
+    /* Stops mobile Chrome / Safari from inflating or stretching font metrics */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   .input-line {
