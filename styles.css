@@ -231,10 +231,6 @@ body {
     font-size: 0.25rem; /* Scales characters down to fit narrow viewports */
     line-height: 1;
     overflow-x: auto;
-
-    -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
   }
 
   .input-line {
