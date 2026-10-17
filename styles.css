@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 #terminal-window {
@@ -228,6 +228,7 @@ body {
 
   /* Scale or hide ASCII art on narrow displays */
   .ascii-art {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
     font-size: 0.25rem; /* Scales characters down to fit narrow viewports */
     line-height: 1;
     overflow-x: auto;
