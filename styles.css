@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 #terminal-window {
@@ -228,24 +228,13 @@ body {
 
   /* Scale or hide ASCII art on narrow displays */
   .ascii-art {
-    font-family: 'VT323', 'Fira Code', monospace;
-    color: #5af78e;
-    font-size: clamp(
-      0.45rem,
-      1.8vw,
-      0.75rem
-    ); /* Dynamically shrinks to fit the mobile screen width */
+    font-size: 0.25rem; /* Scales characters down to fit narrow viewports */
     line-height: 1;
-    letter-spacing: 0;
-    white-space: pre;
-    overflow-x: hidden;
-    user-select: none;
-    margin-top: 10px;
-    margin-bottom: 12px;
+    overflow-x: auto;
 
-    /* Stops mobile Chrome / Safari from inflating or stretching font metrics */
     -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
   }
 
   .input-line {
