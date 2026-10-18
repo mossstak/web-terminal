@@ -85,6 +85,25 @@ body {
   font-size: 0.95rem;
   line-height: 1.5;
   cursor: text;
+  scrollbar-width: thin;
+  scrollbar-color: #2a2e3f transparent;
+}
+
+#terminal-body::-webkit-scrollbar {
+  width: 4px; /* Ultra-thin scrollbar */
+}
+
+#terminal-body::-webkit-scrollbar-track {
+  background: transparent; /* Blends cleanly with #12141d */
+}
+
+#terminal-body::-webkit-scrollbar-thumb {
+  background-color: #2a2e3f; /* Matches your window border */
+  border-radius: 4px;
+}
+
+#terminal-body::-webkit-scrollbar-thumb:hover {
+  background-color: #5af78e; /* Subtle accent glow matching your terminal green */
 }
 
 .mobile-terminal-toolbar {
@@ -125,12 +144,19 @@ body {
   color: #ffffff;
 }
 
+#text-before,
+#text-after {
+  white-space: pre;
+  color: #ffffff;
+}
+
 .custom-cursor {
   display: inline-block;
   color: #5af78e;
   font-weight: bold;
   animation: blink 1s step-start infinite;
   user-select: none;
+  white-space: pre;
 }
 
 @keyframes blink {

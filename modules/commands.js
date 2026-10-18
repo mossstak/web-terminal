@@ -18,7 +18,7 @@ export const commandsMap = new Map([
     },
   ],
   [
-    'project',
+    'technical-projects',
     {
       description: 'View small projects from my Github',
       execute: () => '1. Web Terminal\n2. Portfolio Website\n3. Weather CLI',
