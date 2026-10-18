@@ -36,10 +36,13 @@ export const commandsMap = new Map([
           throw new Error(`Could not find GitHub user "${username}".`)
         const repos = await res.json()
         if (!repos.length)
-          return `No public repositories found for ${username}.`
-        return repos
+          return `No public repositories found for ${username}.\n\nTo view more of my github project, visit repository at https://github.com/mossstak`
+
+        const repoList = repos
           .map((r) => `• ${r.name}: ${r.description || 'No description'}`)
           .join('\n')
+
+        return `${repoList}\n\nTo view more of my github project, visit repository at https://github.com/mossstak`
       },
     },
   ],
